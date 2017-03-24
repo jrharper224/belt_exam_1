@@ -13,13 +13,9 @@
         <form action="/users" method="post">
           {% csrf_token %}
           <div>
-            <label>First Name:</label>
-            <input type = "text" name="first_name">
+            <label>Name:</label>
+            <input type = "text" name="name">
           </div>
-        <div>
-          <label>Last Name:</label>
-          <input type = "text" name = "last_name">
-        </div>
         <div>
           <label>Email:<label>
           <input type = "text" name = "email">
@@ -28,6 +24,7 @@
           <label>Password:</label>
           <input type = "password" name = "password">
         </div>
+        *password should be at least 8 characters
         <div>
           <label>Confirm Password:</label>
           <input type = "password" name = "password2">

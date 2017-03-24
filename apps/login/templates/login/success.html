@@ -5,6 +5,29 @@
     <title>Welcome!</title>
   </head>
   <body>
-    Success! Welcome User {{request.session.user_id}}!
+    <div id = "container">
+      <div id = 'dashboard'>
+        <h1>Welcome {{name}}!</h1>
+        <a href = '/logout' >Logout</a>
+      </div>
+      <div id = "messages">
+        <h4>Quotes</h4>
+
+      </div>
+      <div id = "favorites">
+        <h4>Favorite Quotes!</h4>
+      </div>
+      <div id = 'post_quote'>
+        Contribute a Quote:
+        <form action = "/submit_quote" method = "post">
+          <label>Quoted By:</label>
+          <input type = "text" name = "author">
+          <label>Message:</label>
+          <input type = "text" name = "message">
+          <input type = "submit" value = "Submit">
+        </form>
+
+
+    </div>
   </body>
 </html>
